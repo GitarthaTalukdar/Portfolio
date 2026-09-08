@@ -16,12 +16,11 @@ export default function Research() {
           RESEARCH & PUBLICATIONS
         </h2>
 
-        <div className="w-20 h-[2px] bg-blue-400 mx-auto mt-3 mb-8 shadow-[0_0_10px_rgba(0,150,255,0.8)]"></div>
+        <div className="w-20 h-[2px] bg-white/60 mx-auto mt-3 mb-8"></div>
 
         {/* Research Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-          {/* 01 — Data Quality */}
           <ResearchCard
             number="01"
             title="A Framework for Optimizing Data Quality - Preprocessing, Attribute Ranking and Noise Handling for Improved Dataset Accuracy"
@@ -31,7 +30,6 @@ export default function Research() {
             statusColor="bg-green-500"
           />
 
-          {/* 02 — ASD Speech */}
           <ResearchCard
             number="02"
             title="An Ensemble-Based Feature Selection Framework for ASD Speech Classification"
@@ -42,7 +40,6 @@ export default function Research() {
             link="https://doi.org/10.1109/GCON69192.2026.11649116"
           />
 
-          {/* 03 — Lexical & Semantic */}
           <ResearchCard
             number="03"
             title="Evaluating Lexical and Semantic Features for Unsupervised Text Clustering"
@@ -53,7 +50,6 @@ export default function Research() {
             link="https://doi.org/10.1109/GCON69192.2026.11648215"
           />
 
-          {/* 04 — Brain Tumor */}
           <ResearchCard
             number="04"
             title="A Brain Tumor Classification using Ensemble Learning and Hyperparameter Tuning"
@@ -64,7 +60,7 @@ export default function Research() {
             link="https://doi.org/10.1109/ICC-CNS70518.2026.11606042"
           />
 
-          {/* 05 — Hallucination Survey — CENTER */}
+          {/* Center Research */}
           <div className="md:col-span-2 flex justify-center">
             <div className="w-full md:w-[62%]">
               <ResearchCard
@@ -116,30 +112,30 @@ function ResearchCard({
       className="
         group
         relative
-        bg-white/[0.035]
+        bg-white/[0.025]
         backdrop-blur-xl
         border border-white/10
         rounded-lg
         px-5
         py-4
-        shadow-[0_0_15px_rgba(0,150,255,0.07)]
-        hover:shadow-[0_0_25px_rgba(0,150,255,0.20)]
-        hover:border-blue-400/30
+        shadow-[0_0_15px_rgba(255,255,255,0.03)]
+        hover:shadow-[0_0_25px_rgba(0,200,255,0.10)]
+        hover:border-white/20
         transition-all
         duration-300
       "
     >
 
-      {/* Top Accent */}
+      {/* Subtle Accent */}
       <div
         className="
           absolute
           top-0
           left-6
           right-6
-          h-[1.5px]
-          bg-blue-400/60
-          group-hover:bg-blue-400
+          h-[1px]
+          bg-white/20
+          group-hover:bg-cyan-400/70
           transition-all
           duration-300
         "
@@ -148,12 +144,17 @@ function ResearchCard({
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-3">
 
-        {/* Number */}
-        <span className="text-[10px] text-blue-400/60 font-bold tracking-[0.15em]">
+        <span className="
+          text-[10px]
+          text-white/40
+          font-bold
+          tracking-[0.15em]
+          group-hover:text-cyan-400/70
+          transition-colors
+        ">
           RESEARCH {number}
         </span>
 
-        {/* Status */}
         <span
           className={`
             ${statusColor}
@@ -171,16 +172,15 @@ function ResearchCard({
 
       </div>
 
-
       {/* Title */}
       <h3
         className="
           text-base
           md:text-[17px]
           font-bold
-          text-blue-400
+          text-white/90
           leading-snug
-          group-hover:text-blue-300
+          group-hover:text-cyan-200
           transition-colors
           duration-300
         "
@@ -188,20 +188,17 @@ function ResearchCard({
         {title}
       </h3>
 
-
       {/* Organization */}
       {org && (
-        <p className="text-white/80 text-xs mt-2">
+        <p className="text-white/55 text-xs mt-2">
           {org}
         </p>
       )}
 
-
       {/* Year */}
-      <p className="text-gray-500 text-[10px] mt-1">
+      <p className="text-white/30 text-[10px] mt-1">
         {year}
       </p>
-
 
       {/* DOI */}
       {link && (
@@ -217,13 +214,13 @@ function ResearchCard({
             py-1.5
             text-[10px]
             font-semibold
-            text-blue-200
+            text-white/70
             border
-            border-blue-400/30
+            border-white/15
             rounded-md
-            hover:bg-blue-400
+            hover:bg-white
             hover:text-black
-            hover:border-blue-400
+            hover:border-white
             transition-all
             duration-300
           "
